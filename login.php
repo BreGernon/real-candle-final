@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $login=1;
             session_start();
             $_SESSION['username']=$username;
-            header('location:mainPage.php');
+            header('location:https://candle-app-test-f4f867e61c16.herokuapp.com/mainPage.php');
         }else{
             $invalid=1;
         }
