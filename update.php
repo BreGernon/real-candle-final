@@ -2,7 +2,7 @@
 include 'connect.php';
 $id=$_GET['updateid'];
 
-$sql = "SELECT * FROM `cst-323`.`candle_database` WHERE (`id` = '$id')";
+$sql = "SELECT * FROM `candle_database` WHERE (`id` = '$id')";
 $result=mysqli_query($con,$sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -15,7 +15,7 @@ if (isset($_POST['update'])) {
     $scent = $_POST['scent'];
     $quantity = $_POST['quantity'];
 
-    $sql = "UPDATE `cst-323`.`candle_database` SET `candlename` = '$candlename', `scent` = '$scent', `quantity` = '$quantity' WHERE (`id` = '$id')";
+    $sql = "UPDATE `candle_database` SET `candlename` = '$candlename', `scent` = '$scent', `quantity` = '$quantity' WHERE (`id` = '$id')";
     $result = mysqli_query($con, $sql);
     if ($result) {
         header('location:mainPage.php');
